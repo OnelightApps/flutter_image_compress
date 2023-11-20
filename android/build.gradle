@@ -26,6 +26,10 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 31
 
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.fluttercandies.flutter_image_compress'
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
